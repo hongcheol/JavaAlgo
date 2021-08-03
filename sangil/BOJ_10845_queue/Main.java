@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
+
+// Node로 Linked List 형태의 queue를 구현
 public class Main {
 	
 	private Node firstNode;

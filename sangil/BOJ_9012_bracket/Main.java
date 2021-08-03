@@ -20,6 +20,7 @@ public class Main {
 				char ch = s.charAt(i);
 				if(ch == '(') {
 					stack.push(ch);
+				// ')'를 만났을 때 stack이 비었다면 vps가 아니다.
 				} else if(stack.empty()) {
 					sb.append("NO").append("\n");
 					isVPS = false;
@@ -28,6 +29,7 @@ public class Main {
 					stack.pop();
 				}
 			}
+			//for문이 끝나고 잘 종료 되었을 때랑 break로 끝났을 때를 구분
 			if(isVPS && stack.empty()) {
 				sb.append("YES").append("\n");
 			} else if(!stack.empty()){
