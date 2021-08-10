@@ -1,4 +1,4 @@
-package com.algo.java;
+package com.algo.java.BOJ;
 
 import java.io.BufferedReader;
 import java.io.IOException;
