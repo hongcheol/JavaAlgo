@@ -31,7 +31,6 @@ public class BOJ_1963_prime_search {
             tempList.clear();
             while(!queue.isEmpty()){
                 now = queue.get(0);
-                //System.out.println(now);
                 queue.remove(0);
                 m[now] = true;
                 //현재 꺼낸 것에서 가능한 애들 다 집어넣
@@ -75,7 +74,6 @@ public class BOJ_1963_prime_search {
     static int numChange(int n,int digit, int change){
         String temp = Integer.toString(n);
         String result = temp.substring(0,digit) + change + temp.substring(digit+1);
-        //System.out.println("result = " + result);
         return Integer.parseInt(result);
     }
 }
