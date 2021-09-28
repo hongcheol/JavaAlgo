@@ -6,6 +6,19 @@ import java.util.Queue;
 import java.util.Stack;
 import java.util.StringTokenizer;
 
+/**
+ * 10
+ * 1 1 1 1 1 1 0 0 0 0
+ * 1 1 1 1 0 1 0 0 0 0
+ * 1 1 1 1 0 1 0 0 0 0
+ * 1 1 1 1 0 1 0 0 0 0
+ * 1 1 1 1 1 1 0 0 0 0
+ * 0 0 0 0 0 0 0 0 0 0
+ * 0 0 0 0 0 0 0 0 0 0
+ * 0 0 0 0 0 0 0 0 0 0
+ * 0 0 0 0 0 0 0 0 1 0
+ * 0 0 0 0 0 0 0 0 1 0
+ */
 public class BOJ_2146 {
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringTokenizer st;
@@ -78,6 +91,7 @@ public class BOJ_2146 {
                 short nr = (short) (cur[0] + dr[i]);
                 short nc = (short) (cur[1] + dc[i]);
                 if(boundCheck(nr,nc) && !visited[nr][nc]){
+
                     if(world[nr][nc] == num) continue;
                     else if(world[nr][nc] != 0 && world[nr][nc] != num){
                         return cur[2];
