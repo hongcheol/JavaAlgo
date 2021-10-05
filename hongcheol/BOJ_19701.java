@@ -71,7 +71,7 @@ public class BOJ_19701 {
             for(int c=0; c<V; ++c){
                 if(!visited[c] && matrix[current.no][c] != 0
                         &&  distance[c] > current.distance+matrix[current.no][c]){
-                    path[c] = current.no;
+                    //path[c] = current.no;
                     distance[c] = current.distance+matrix[current.no][c];
                     pq.offer(new Vertex(c,distance[c]));
                 }
