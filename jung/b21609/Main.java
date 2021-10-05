@@ -16,6 +16,14 @@ public class Main {
 	static int d_size;
 	static ArrayList<Point> blocks;
 
+	
+	// 1. 블럭 그룹 찾기
+	// 2. 블럭 그룹 부수기
+	// 3. 중력
+	// 4. 회전
+	// 5. 중력
+	// 1~5 반복
+	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		N = sc.nextInt();
@@ -35,9 +43,6 @@ public class Main {
 			rainbow_max = 0;
 			breaking();
 
-			for (int i = 0; i < N; i++) {
-				System.out.println(Arrays.toString(map[i]));
-			}
 			if (d_size <= 1)
 				break;
 			gravity();		// 중력
@@ -56,8 +61,8 @@ public class Main {
 			copy[i] = map[i].clone();
 		}
 		for (int i = 0; i < N; i++) {
-			for (int j = 0; j < N; j++) {
-				map[i][j] = copy[j][N - 1 - i];
+			for (int j = 0; j < N; j++) {			// ni =  j
+				map[i][j] = copy[j][N - 1 - i]; 	// nj = (N-1) - i 
 			}
 		}
 	}
@@ -90,8 +95,7 @@ public class Main {
 
 	private static void breaking() {		// 블럭 부수기
 		check = new int[N][N];
-		for (int c = 1; c <= M; c++) {
-			
+		for (int c = 1; c <= M; c++) {		
 			for (int i = 0; i < N; i++) {
 				for (int j = 0; j < N; j++) {
 					if (map[i][j] == c && check[i][j]!=c) {		// 기준 블럭 찾기
