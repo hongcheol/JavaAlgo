@@ -48,7 +48,10 @@ public class Main6 {
 
 				}
 				System.out.println((dp[N][E] + E) / 2);
-
+				for (int j = 0; j <= E; j += 100) {
+					System.out.print((j + "\t"));
+				}
+				System.out.println();
 				for (int i = 0; i <= N; i++) {
 					for (int j = 0; j <= E; j += 100) {
 						System.out.print((dp[i][j] + "\t"));

@@ -29,9 +29,11 @@ public class Main3 {
 		        	if(i==k) continue;
 		            for (int j = 1; j <= V; j++) {
 		            	if(j==k) continue;
-		            	if(arr[i][j][0] - arr[i][j][1] > arr[i][k][0] + arr[k][j][0] - Math.max(arr[i][k][1], arr[k][j][1])) {
-		            		arr[i][j][0] = arr[i][k][0] + arr[k][j][0];
-		            		arr[i][j][1] = Math.max(arr[i][k][1], arr[k][j][1]);
+		            	int t = arr[i][k][0] + arr[k][j][0];
+		            	int e = Math.max(arr[i][k][1], arr[k][j][1]);
+		            	if(arr[i][j][0] - arr[i][j][1] > t-e) {
+		            		arr[i][j][0] = t;
+		            		arr[i][j][1] = e;
 		            	}
 		            }
 		        }

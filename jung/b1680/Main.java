@@ -27,15 +27,15 @@ public class Main {
 			int l = 0;
 			while(!q.isEmpty()) {
 				int [] arr = q.poll();
-				if(w+arr[1]>W) {
+				if(w+arr[1]>W) {	// 쓰레기의 양이 용량이 넘을 때
 					w=0;
 					l+=arr[0]*2;
 				}
-				if(w+arr[1]==W) {
+				if(w+arr[1]==W) {	// 쓰리기의 양이 용량에 딱 맞을 때
 					w=0;
 					l+=arr[0]*2;
 				}
-				else {
+				else {				// 쓰리기의 양이 요량을 채우지 못하였 을 때
 					w+=arr[1];
 					if(q.isEmpty()) l+=arr[0]*2;
 				}
